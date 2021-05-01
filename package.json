@@ -1,0 +1,18 @@
+{
+  "name": "escarole",
+  "version": "0.1.0",
+  "description": "An Entity Component System library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {}
+}

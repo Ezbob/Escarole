@@ -63,4 +63,57 @@ describe('EntityManager', () => {
     expect(oneComponent).toEqual(1)
   })
 
+  test('Can get filtered entities from iterator', () => {
+    let entityManager = new EntityManager()
+
+    class Component {}
+    class Component2 {}
+
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component())
+    entityManager.createEntity(new Component2())
+
+    let foundEntities = 0
+
+    for(let f of entityManager.getEntities(Component, Component2)) {
+      let c1 = f.getComponent(Component)
+      expect(c1).toBeDefined()
+      expect(c1).toBeInstanceOf(Component)
+
+      let c2 = f.getComponent(Component2)
+
+      expect(c2).toBeDefined()
+      expect(c2).toBeInstanceOf(Component2)
+
+      if (c1 && c2) {
+        foundEntities++
+      }
+    }
+
+    expect(foundEntities).toEqual(3)
+  })
+
+  test('Can get unfiltered entities from iterator', () => {
+    let entityManager = new EntityManager()
+
+    class Component {}
+    class Component2 {}
+
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component())
+    entityManager.createEntity(new Component2())
+
+    let foundEntities = 0
+
+    for(let f of entityManager.getEntities()) {
+      expect(f).toBeDefined()
+      foundEntities++
+    }
+
+    expect(foundEntities).toEqual(entityManager.length)
+  })
 })

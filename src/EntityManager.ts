@@ -25,8 +25,22 @@ export class EntityManager {
     }
   }
 
-  get data() {
-    return this.entities
+  public *getEntities(...components: ComponentConstructor[]) {
+    if (components.length === 0) {
+      for (let e of this.entities) {
+        yield e
+      }
+    } else {
+      for (let entity of this.entities) {
+        let hasAllComponents = true
+        for (let componentType of components) {
+          hasAllComponents = hasAllComponents && entity.getComponent(componentType)
+        }
+        if (hasAllComponents) {
+          yield entity
+        }
+      }
+    }
   }
 
   get length() {

@@ -7,7 +7,7 @@
     "test": "jest",
     "coverage": "jest --coverage"
   },
-  "author": "",
+  "author": "Anders Busch",
   "license": "Apache 2.0",
   "devDependencies": {
     "@types/jest": "^26.0.23",

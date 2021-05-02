@@ -8,7 +8,7 @@ describe("Entity", () => {
   })
 
   test("Can assign id to entity", () => {
-    let entityId = 0
+    let entityId = 42
     let entity = new Entity(registry, entityId)
 
     expect(entity.id).toBe(entityId)

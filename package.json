@@ -4,7 +4,8 @@
   "description": "An Entity Component System library",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --downlevelIteration"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "MIT",

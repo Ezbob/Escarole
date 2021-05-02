@@ -1,2 +1,4 @@
-*.ts	text eol=lf
-*.js	text eol=lf
+*.ts     text eol=lf
+*.js     text eol=lf
+*.html   text eof=crlf
+*.css    text eof=crlf

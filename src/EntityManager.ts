@@ -1,27 +1,28 @@
-
-import { ComponentRegistry } from './ComponentRegistry';
-import { Entity } from './Entity';
+import { ComponentRegistry } from './ComponentRegistry'
+import { Entity } from './Entity'
 
 export class EntityManager {
-  private nextId: number = 0;
+  private nextId: number = 0
   private entities: Entity[] = []
   private componentRegistry: ComponentRegistry = new ComponentRegistry()
 
   private getNextId(): number {
-    return this.nextId++;
+    return this.nextId++
   }
 
   public createEntity(...components: ComponentInstance[]) {
-    let entity = new Entity(this.componentRegistry, this.getNextId());
+    let entity = new Entity(this.componentRegistry, this.getNextId())
     entity.addComponent(...components)
-    this.entities.push(entity);
-    return entity;
+    this.entities.push(entity)
+    return entity
   }
 
   public deleteEntity(entity: Entity) {
-    let index = this.entities.findIndex(otherEntity => otherEntity.id === entity.id);
+    let index = this.entities.findIndex(
+      (otherEntity) => otherEntity.id === entity.id
+    )
     if (index != -1) {
-      this.entities.splice(index, 1);
+      this.entities.splice(index, 1)
     }
   }
 
@@ -34,7 +35,8 @@ export class EntityManager {
       for (let entity of this.entities) {
         let hasAllComponents = true
         for (let componentType of components) {
-          hasAllComponents = hasAllComponents && entity.getComponent(componentType)
+          hasAllComponents =
+            hasAllComponents && entity.getComponent(componentType)
         }
         if (hasAllComponents) {
           yield entity

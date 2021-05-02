@@ -2,11 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "es2015",
-      "es2016"
-    ],
+    "lib": ["dom", "es2015", "es2016"],
     "target": "es2018",
     "module": "es2020",
     "moduleResolution": "node",
@@ -20,10 +16,6 @@
     "resolveJsonModule": true,
     "allowJs": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "./node_modules/**/*"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["./node_modules/**/*"]
 }

@@ -1,5 +1,3 @@
+type ComponentConstructor<T = any> = { new (...a: any): T }
 
-type ComponentConstructor<T = any> = {new(...a: any): T};
-
-type ComponentInstance = {constructor: Function};
-
+type ComponentInstance = { constructor: Function }

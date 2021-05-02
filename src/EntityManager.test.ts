@@ -1,8 +1,6 @@
-import { EntityManager } from "./EntityManager"
-
+import { EntityManager } from './EntityManager'
 
 describe('EntityManager', () => {
-
   test('Can create entities', () => {
     let entityManager = new EntityManager()
 
@@ -69,15 +67,15 @@ describe('EntityManager', () => {
     class Component {}
     class Component2 {}
 
-    entityManager.createEntity(new Component(), new Component2)
-    entityManager.createEntity(new Component(), new Component2)
-    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2())
+    entityManager.createEntity(new Component(), new Component2())
+    entityManager.createEntity(new Component(), new Component2())
     entityManager.createEntity(new Component())
     entityManager.createEntity(new Component2())
 
     let foundEntities = 0
 
-    for(let f of entityManager.getEntities(Component, Component2)) {
+    for (let f of entityManager.getEntities(Component, Component2)) {
       let c1 = f.getComponent(Component)
       expect(c1).toBeDefined()
       expect(c1).toBeInstanceOf(Component)
@@ -101,15 +99,15 @@ describe('EntityManager', () => {
     class Component {}
     class Component2 {}
 
-    entityManager.createEntity(new Component(), new Component2)
-    entityManager.createEntity(new Component(), new Component2)
-    entityManager.createEntity(new Component(), new Component2)
+    entityManager.createEntity(new Component(), new Component2())
+    entityManager.createEntity(new Component(), new Component2())
+    entityManager.createEntity(new Component(), new Component2())
     entityManager.createEntity(new Component())
     entityManager.createEntity(new Component2())
 
     let foundEntities = 0
 
-    for(let f of entityManager.getEntities()) {
+    for (let f of entityManager.getEntities()) {
       expect(f).toBeDefined()
       foundEntities++
     }

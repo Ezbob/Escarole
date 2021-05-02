@@ -1,20 +1,20 @@
 import { ComponentRegistry } from './ComponentRegistry'
-import {Entity} from './Entity'
+import { Entity } from './Entity'
 
-describe("Entity", () => {
+describe('Entity', () => {
   let registry: ComponentRegistry = undefined
   beforeEach(() => {
     registry = new ComponentRegistry()
   })
 
-  test("Can assign id to entity", () => {
+  test('Can assign id to entity', () => {
     let entityId = 42
     let entity = new Entity(registry, entityId)
 
     expect(entity.id).toBe(entityId)
   })
 
-  test("Component can be added", () => {
+  test('Component can be added', () => {
     let entityId = 0
     let entity = new Entity(registry, entityId)
 
@@ -25,7 +25,7 @@ describe("Entity", () => {
     expect(entity.getComponent(Component)).toBeInstanceOf(Component)
   })
 
-  test("Getting a non-existing component on entity returns an undefined component", () => {
+  test('Getting a non-existing component on entity returns an undefined component', () => {
     let entityId = 0
     let entity = new Entity(registry, entityId)
 
@@ -35,7 +35,7 @@ describe("Entity", () => {
     expect(entity.getComponent(Component)).not.toBeInstanceOf(Component)
   })
 
-  test("Can remove an existing component from a entity", () => {
+  test('Can remove an existing component from a entity', () => {
     let entityId = 0
     let entity = new Entity(registry, entityId)
 
@@ -50,5 +50,4 @@ describe("Entity", () => {
 
     expect(entity.getComponent(Component)).toBeUndefined()
   })
-
 })

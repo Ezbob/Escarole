@@ -128,6 +128,10 @@ for (let entity of entityManager.getEntities(VelocityComponent, PositionComponen
 }
 ```
 
+### Using a System
+
+System are the transform unit of a Entity Component System architecture. Escarole does not provide a specific abstraction to model a system. Rather, functions or methods are used to implement a system.
+
 
 ## License
 

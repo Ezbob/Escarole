@@ -14,7 +14,7 @@ describe('Entity', () => {
     expect(entity.id).toBe(entityId)
   })
 
-  test('Component can be added', () => {
+  test('Component can be added to a entity', () => {
     let entityId = 0
     let entity = new Entity(registry, entityId)
 
@@ -46,7 +46,7 @@ describe('Entity', () => {
     expect(entity.getComponent(Component)).toBeDefined()
     expect(entity.getComponent(Component)).toBeInstanceOf(Component)
 
-    entity.removeComponent(Component)
+    entity.deleteComponent(Component)
 
     expect(entity.getComponent(Component)).toBeUndefined()
   })

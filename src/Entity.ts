@@ -15,7 +15,7 @@ export class Entity {
     return this.components.get(cid)
   }
 
-  removeComponent(...components: ComponentConstructor[]) {
+  deleteComponent(...components: ComponentConstructor[]) {
     for (let component of components) {
       let cid = this.componentRegistry.getId(component)
       this.components.delete(cid)

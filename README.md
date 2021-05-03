@@ -4,13 +4,15 @@
 
 ---
 
-Enity System Component library for typescript and javascript.
+Entity System Component library for typescript and javascript.
 
+<!--
 ## Installation
 
 ```shell
 $ npm install escarole --save
 ```
+-->
 
 ## Usage
 

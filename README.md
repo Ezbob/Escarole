@@ -63,7 +63,9 @@ for (let entity of entityManager.getEntities()) {
   // ...
 }
 
-// Select entities, which only has the both the PositionComponent and VelocityComponent (i.e. a entity with only a PositionComponent or VelocityComponent  will not be selected)
+// Select entities, which only has the both the PositionComponent and
+// VelocityComponent (i.e. a entity with only a PositionComponent or
+// VelocityComponent  will not be selected)
 for (let entity of entityManager.getEntities(PositionComponent, VelocityComponent)) {
   // ...
 }

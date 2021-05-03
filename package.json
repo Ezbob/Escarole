@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "format-src": "npx prettier --write src"
+    "format-src": "prettier --write src",
+    "prepublish": "tsc"
   },
   "author": "Anders Busch",
   "license": "Apache 2.0",

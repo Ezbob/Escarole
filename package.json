@@ -9,7 +9,7 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "format-src": "prettier --write src",
-    "prepublish": "tsc",
+    "prepare": "tsc",
     "build": "tsc",
     "clean": "rm -r dist coverage"
   },

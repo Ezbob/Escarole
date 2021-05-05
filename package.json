@@ -1,7 +1,16 @@
 {
   "name": "escarole",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "An Entity Component System library",
+  "repository": {
+    "url": "https://github.com/Ezbob/Escarole"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://spdx.org/licenses/Apache-2.0.html"
+    }
+  ],
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",

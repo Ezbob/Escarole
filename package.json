@@ -1,6 +1,6 @@
 {
   "name": "escarole",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An Entity Component System library",
   "repository": {
     "url": "https://github.com/Ezbob/Escarole"

@@ -7,7 +7,8 @@
     "coverage": "jest --coverage",
     "format-src": "prettier --write src",
     "prepublish": "tsc",
-    "build": "tsc"
+    "build": "tsc",
+    "clean": "rm -r dist coverage"
   },
   "author": "Anders Busch",
   "license": "Apache 2.0",
@@ -15,7 +16,7 @@
     "@types/jest": "^26.0.23",
     "jest": "^26.6.3",
     "prettier": "2.2.1",
-    "ts-jest": "^26.5.5",
+    "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
   },
   "dependencies": {}

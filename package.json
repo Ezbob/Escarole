@@ -2,12 +2,12 @@
   "name": "escarole",
   "version": "0.1.0",
   "description": "An Entity Component System library",
-  "main": "src/index.js",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
     "format-src": "prettier --write src",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "build": "tsc"
   },
   "author": "Anders Busch",
   "license": "Apache 2.0",

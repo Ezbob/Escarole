@@ -4,14 +4,15 @@
     "esModuleInterop": true,
     "lib": ["dom", "es2015", "es2016"],
     "target": "es2018",
-    "module": "AMD",
+    "module": "system",
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outFile": "dist/index.js",
-    "declaration": true
+    "outFile": "dist/escarole.js",
+    "declaration": true,
+    "moduleResolution": "node"
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["./node_modules/**/*",  "**/src/**/*.test.ts"]

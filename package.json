@@ -22,5 +22,12 @@
     "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "entity-component-system",
+    "program pattern",
+    "game programming"
+  ],
+  "types": "./dist/escarole.d.ts",
+  "main": "./dist/escarole.js"
 }

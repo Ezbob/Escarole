@@ -5,12 +5,6 @@
   "repository": {
     "url": "https://github.com/Ezbob/Escarole"
   },
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "https://spdx.org/licenses/Apache-2.0.html"
-    }
-  ],
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
@@ -20,7 +14,7 @@
     "clean": "rm -r dist coverage"
   },
   "author": "Anders Busch",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "jest": "^26.6.3",

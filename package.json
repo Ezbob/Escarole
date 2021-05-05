@@ -28,6 +28,10 @@
     "program pattern",
     "game programming"
   ],
-  "types": "./dist/escarole.d.ts",
-  "main": "./dist/escarole.js"
+  "types": "index.d.ts",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
 }

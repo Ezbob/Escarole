@@ -10,7 +10,7 @@
     "noUnusedParameters": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outFile": "dist/escarole.js",
+    "outFile": "index.js",
     "declaration": true,
     "moduleResolution": "node"
   },

@@ -4,6 +4,8 @@
 
 ---
 
+[![CI](https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk)](https://github.com/Ezbob/Escarole/actions/workflows/main.yml)
+
 Entity System Component library for typescript and javascript.
 
 ## Installation

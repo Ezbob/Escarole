@@ -6,13 +6,11 @@
 
 Entity System Component library for typescript and javascript.
 
-<!--
 ## Installation
 
-```shell
+```bash
 $ npm install escarole --save
 ```
--->
 
 ## Usage
 
@@ -136,6 +134,5 @@ System are the transform unit of a Entity Component System architecture. Escarol
 
 
 ## License
-
 
 [Apache 2.0](https://opensource.org/licenses/Apache-2.0)

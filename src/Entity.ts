@@ -1,4 +1,4 @@
-import { ComponentRegistry } from './ComponentRegistry'
+import { ComponentRegistry } from './componentRegistry'
 
 export class Entity {
   readonly id: number
@@ -12,13 +12,13 @@ export class Entity {
 
   getComponent<T>(c: ComponentConstructor<T>): T | undefined {
     let cid = this.componentRegistry.getId(c)
-    return this.components.get(cid)
+    return this.components.get(cid as number)
   }
 
   deleteComponent(...components: ComponentConstructor[]) {
     for (let component of components) {
       let cid = this.componentRegistry.getId(component)
-      this.components.delete(cid)
+      this.components.delete(cid as number)
     }
   }
 

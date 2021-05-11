@@ -1,8 +1,8 @@
-import { ComponentRegistry } from './ComponentRegistry'
-import { Entity } from './Entity'
+import { ComponentRegistry } from '../src/componentRegistry'
+import { Entity } from '../src/entity'
 
 describe('Entity', () => {
-  let registry: ComponentRegistry = undefined
+  let registry: ComponentRegistry
   beforeEach(() => {
     registry = new ComponentRegistry()
   })

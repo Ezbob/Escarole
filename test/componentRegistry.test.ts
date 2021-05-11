@@ -1,4 +1,4 @@
-import { ComponentRegistry } from './ComponentRegistry'
+import { ComponentRegistry } from '../src/componentRegistry'
 
 describe('Component registry', () => {
   test('Registering a new component type returns a new id', () => {

@@ -1,4 +1,4 @@
-import { EntityManager } from './EntityManager'
+import { EntityManager } from '../src/entityManager'
 
 describe('EntityManager', () => {
   test('Can create entities', () => {

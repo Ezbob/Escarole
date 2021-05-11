@@ -1,5 +1,5 @@
-import { ComponentRegistry } from './ComponentRegistry'
-import { Entity } from './Entity'
+import { ComponentRegistry } from './componentRegistry'
+import { Entity } from './entity'
 
 export class EntityManager {
   private nextId: number = 0
@@ -49,7 +49,7 @@ export class EntityManager {
     return this.entities.length
   }
 
-  *[Symbol.iterator](): Generator<Entity> {
+  *[Symbol.iterator](): IterableIterator<Entity> {
     for (let e of this.entities) {
       yield e
     }

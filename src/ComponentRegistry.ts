@@ -4,7 +4,7 @@ export class ComponentRegistry {
 
   public register(c: ComponentConstructor): number {
     if (this.componentIds.has(c)) {
-      return this.componentIds.get(c)
+      return this.componentIds.get(c) as number
     }
     let res = this.nextId++
     this.componentIds.set(c, res)

@@ -1,57 +1,57 @@
-import { ComponentRegistry } from './componentRegistry'
-import { Entity } from './entity'
+import { ComponentRegistry } from './componentRegistry';
+import { Entity } from './entity';
 
 export class EntityManager {
-  private nextId: number = 0
-  private entities: Entity[] = []
-  private componentRegistry: ComponentRegistry = new ComponentRegistry()
+  private nextId: number = 0;
+  private entities: Entity[] = [];
+  private componentRegistry: ComponentRegistry = new ComponentRegistry();
 
   private getNextId(): number {
-    return this.nextId++
+    return this.nextId++;
   }
 
   public createEntity(...components: ComponentInstance[]) {
-    let entity = new Entity(this.componentRegistry, this.getNextId())
-    entity.addComponent(...components)
-    this.entities.push(entity)
-    return entity
+    let entity = new Entity(this.componentRegistry, this.getNextId());
+    entity.addComponent(...components);
+    this.entities.push(entity);
+    return entity;
   }
 
   public deleteEntity(entity: Entity) {
     let index = this.entities.findIndex(
-      (otherEntity) => otherEntity.id === entity.id
-    )
-    if (index != -1) {
-      this.entities.splice(index, 1)
+      otherEntity => otherEntity.id === entity.id
+    );
+    if (index !== -1) {
+      this.entities.splice(index, 1);
     }
   }
 
   public *getEntities(...components: ComponentConstructor[]) {
     if (components.length === 0) {
       for (let e of this.entities) {
-        yield e
+        yield e;
       }
     } else {
       for (let entity of this.entities) {
-        let hasAllComponents = true
+        let hasAllComponents = true;
         for (let componentType of components) {
           hasAllComponents =
-            hasAllComponents && entity.getComponent(componentType)
+            hasAllComponents && entity.getComponent(componentType);
         }
         if (hasAllComponents) {
-          yield entity
+          yield entity;
         }
       }
     }
   }
 
   get length() {
-    return this.entities.length
+    return this.entities.length;
   }
 
   *[Symbol.iterator](): IterableIterator<Entity> {
     for (let e of this.entities) {
-      yield e
+      yield e;
     }
   }
 }

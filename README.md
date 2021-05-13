@@ -45,11 +45,11 @@ As an entity is comprised by components, we can create entities by first creatin
 ```typescript
 import {EntityManager} from `escarole`
 
-const entityManager = new EntityManger()
-
-let entity1 = entity.createEntity(new VelocityComponent(), new PositionComponent())
-
-let entity2 = entity.createEntity(new PositionComponent())
+const entityManager = new EntityManager()
+ 
+let entity1 = entityManager.createEntity(new VelocityComponent(), new PositionComponent())
+ 
+let entity2 = entityManager.createEntity(new PositionComponent())
 
 ```
 Entities also be can be removed by `deleteEntity` with the desired entity on the `EntityManager`.

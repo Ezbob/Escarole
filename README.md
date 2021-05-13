@@ -2,9 +2,18 @@
   <img width="200" src="https://github.com/Ezbob/Escarole/blob/98b96f5b2ebc90d116d6b87a6e2e3ef03aec95d3/docs/logo.png" alt="Escarole Logo">
 </p>
 
----
 
 [![CI](https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk)](https://github.com/Ezbob/Escarole/actions/workflows/main.yml)
+
+<div align="left">
+  <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-branches.svg" alt="Coverage Branches">
+  <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-functions.svg" alt="Coverage Functions">
+  <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-lines.svg" alt="Coverage Lines">
+  <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-statements.svg" alt="Coverage Statements">
+</div>
+
+---
+
 
 Entity System Component library for typescript and javascript.
 

@@ -1,6 +1,10 @@
 import { ComponentRegistry } from './componentRegistry';
 import { Entity } from './entity';
 
+/**
+ * EntityManager is the facade class for creating, delete and querying Entities, by
+ * keeping an internal array of Entity objects.
+ */
 export class EntityManager {
   /**
    * Entity id cache

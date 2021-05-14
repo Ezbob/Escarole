@@ -22,7 +22,7 @@
         "analyze": "size-limit --why",
         "test:coverage": "npm test -- --coverage",
         "test:badges": "npm run test:coverage  && jest-coverage-badges --output \"./docs/badges\"",
-        "docs:reference": "typedoc ./src/index.ts --out docs/reference/"
+        "docs:reference": "typedoc"
     },
     "jest": {
         "coverageReporters": [

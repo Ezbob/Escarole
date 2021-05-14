@@ -6,12 +6,12 @@ export class EntityManager {
    * Entity id cache
    */
   private nextId: number = 0;
-  
+
   /**
    * Internal pool of entities
    */
   private entities: Entity[] = [];
-  
+
   /**
    * An instance of ComponentRegistry. Associates the component constructors with component ids, which
    * are used in entities queries.

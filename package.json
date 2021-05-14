@@ -12,6 +12,11 @@
     "engines": {
         "node": ">=10"
     },
+    "keywords": [
+        "game programming",
+        "entity component system",
+        "program architecture"
+    ],
     "scripts": {
         "start": "tsdx watch",
         "build": "tsdx build",

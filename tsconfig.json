@@ -37,7 +37,6 @@
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
     "plugin": ["typedoc-plugin-markdown"],
-    "out": "docs/reference",
-    "theme": "minimal"
+    "out": "docs/reference"
   }
 }

@@ -3,7 +3,8 @@
   "include": ["src", "types", "test/componentRegistry.test.ts", "test/entityManager.test.ts", "test/entity.test.ts"],
   "compilerOptions": {
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "target": "ES6",
+    "lib": ["dom", "es2020", "ESNext"],
     "importHelpers": true,
     // output .d.ts declaration files for consumers
     "declaration": true,

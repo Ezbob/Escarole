@@ -1,0 +1,228 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>escarole</title>
+	<meta name="description" content="Documentation for escarole">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">escarole</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>escarole</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p align="center">
+					<img width="200" src="https://github.com/Ezbob/Escarole/blob/98b96f5b2ebc90d116d6b87a6e2e3ef03aec95d3/docs/logo.png" alt="Escarole Logo">
+				</p>
+				<hr>
+				<p><a href="https://github.com/Ezbob/Escarole/actions/workflows/main.yml"><img src="https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk" alt="CI"></a></p>
+				<p>Entity System Component library for typescript and javascript.</p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<pre><code class="language-bash"><span style="color: #000000">$ npm install escarole --save</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#using-components" id="using-components" style="color: inherit; text-decoration: none;">
+					<h3>Using components</h3>
+				</a>
+				<p>This library requires that components are defined by classes or functions (the old style of doing object oriented style in Javascript). </p>
+				<p>Thus to define a you simply define a component class:</p>
+				<pre><code class="language-typescript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">VelocityComponent</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">x</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">y</span><span style="color: #000000">: </span><span style="color: #267F99">number</span>
+<span style="color: #000000">  ) {}</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">PositionComponent</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">x</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">public</span><span style="color: #000000"> </span><span style="color: #001080">y</span><span style="color: #000000">: </span><span style="color: #267F99">number</span>
+<span style="color: #000000">  ) {}</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#using-an-entitymanager" id="using-an-entitymanager" style="color: inherit; text-decoration: none;">
+					<h3>Using an EntityManager</h3>
+				</a>
+				<p>As an entity is comprised by components, we can create entities by first creating a <code>EntityManager</code>, and then invoking <code>createEntity</code> with the desired instantiate of components:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span><span style="color: #001080">EntityManager</span><span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">`escarole`</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">entityManager</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">EntityManager</span><span style="color: #000000">()</span>
+<span style="color: #000000"> </span>
+<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity1</span><span style="color: #000000"> = </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">createEntity</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">VelocityComponent</span><span style="color: #000000">(), </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">PositionComponent</span><span style="color: #000000">())</span>
+<span style="color: #000000"> </span>
+<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity2</span><span style="color: #000000"> = </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">createEntity</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">PositionComponent</span><span style="color: #000000">())</span>
+
+</code></pre>
+				<p>Entities also be can be removed by <code>deleteEntity</code> with the desired entity on the <code>EntityManager</code>.</p>
+				<p>Iterating through all entities can be done via the <code>getEntities</code> method of the <code>EntityManager</code>:</p>
+				<pre><code class="language-typescript">
+<span style="color: #008000">// Iterate through all entities in the manager</span>
+<span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">getEntities</span><span style="color: #000000">()) {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #008000">// Select entities, which only has the both the PositionComponent and</span>
+<span style="color: #008000">// VelocityComponent (i.e. a entity with only a PositionComponent or</span>
+<span style="color: #008000">// VelocityComponent  will not be selected)</span>
+<span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">getEntities</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">, </span><span style="color: #001080">VelocityComponent</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>A shorthand for iterating over all the entities is also available:</p>
+				<pre><code class="language-typescript">
+<span style="color: #008000">// This will iterate through all entities</span>
+<span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#using-an-entity" id="using-an-entity" style="color: inherit; text-decoration: none;">
+					<h3>Using an Entity</h3>
+				</a>
+				<p>Once you have your hands on a Entity you can get one of its associated component by invoking <code>getComponent</code> on a entity. This will give you the associated component instance if the entity has one, or a value of <code>undefined</code> if it&#39;s not there:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">position</span><span style="color: #000000"> = </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">getComponent</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">position</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// Here we have selected entities with a position component</span>
+<span style="color: #000000">    </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> += </span><span style="color: #098658">1</span>
+<span style="color: #000000">    </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">y</span><span style="color: #000000"> += </span><span style="color: #098658">2</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #008000">// The previous loop is equivalent to the following loop</span>
+
+<span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">getEntities</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">position</span><span style="color: #000000"> = </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">getComponent</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> += </span><span style="color: #098658">1</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">y</span><span style="color: #000000"> += </span><span style="color: #098658">2</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>Like entities in a <code>EntityManager</code>, components can also be removed from an <code>Entity</code> or added to it:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">getEntities</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">position</span><span style="color: #000000"> = </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">getComponent</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> += </span><span style="color: #098658">1</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">y</span><span style="color: #000000"> += </span><span style="color: #098658">2</span>
+
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> &gt; </span><span style="color: #098658">10</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// suddenly the entity has velocity !</span>
+<span style="color: #000000">    </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">addComponent</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">VelocityComponent</span><span style="color: #000000">())</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">entity</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">entityManager</span><span style="color: #000000">.</span><span style="color: #795E26">getEntities</span><span style="color: #000000">(</span><span style="color: #001080">VelocityComponent</span><span style="color: #000000">, </span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)) {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// now the entities which has gained velocity will be considered here too</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">position</span><span style="color: #000000"> = </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">getComponent</span><span style="color: #000000">(</span><span style="color: #001080">PositionComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">velocity</span><span style="color: #000000"> = </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">getComponent</span><span style="color: #000000">(</span><span style="color: #001080">VelocityComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> -= </span><span style="color: #098658">1</span><span style="color: #000000"> + </span><span style="color: #001080">velocity</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> * </span><span style="color: #098658">10</span>
+<span style="color: #000000">  </span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">y</span><span style="color: #000000"> += </span><span style="color: #098658">2</span><span style="color: #000000"> + </span><span style="color: #001080">velocity</span><span style="color: #000000">.</span><span style="color: #001080">y</span><span style="color: #000000"> * </span><span style="color: #098658">5</span>
+
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">position</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> &lt; </span><span style="color: #098658">1</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// now our entity does not velocity anymore</span>
+<span style="color: #000000">    </span><span style="color: #001080">entity</span><span style="color: #000000">.</span><span style="color: #795E26">deleteComponent</span><span style="color: #000000">(</span><span style="color: #001080">VelocityComponent</span><span style="color: #000000">)</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#using-a-system" id="using-a-system" style="color: inherit; text-decoration: none;">
+					<h3>Using a System</h3>
+				</a>
+				<p>System are the transform unit of a Entity Component System architecture. Escarole does not provide a specific abstraction to model a system. Rather, functions or methods are used to implement a system.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p><a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/entity.html" class="tsd-kind-icon">Entity</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/entitymanager.html" class="tsd-kind-icon">Entity<wbr>Manager</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

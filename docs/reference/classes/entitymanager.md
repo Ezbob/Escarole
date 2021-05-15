@@ -13,7 +13,6 @@ keeping an internal array of Entity objects.
 
 ### Properties
 
-- [componentRegistry](entitymanager.md#componentregistry)
 - [entities](entitymanager.md#entities)
 - [nextId](entitymanager.md#nextid)
 
@@ -39,24 +38,13 @@ keeping an internal array of Entity objects.
 
 ## Properties
 
-### componentRegistry
-
-• `Private` **componentRegistry**: *ComponentRegistry*
-
-An instance of ComponentRegistry. Associates the component constructors with component ids, which
-are used in entities queries.
-
-Defined in: [entityManager.ts:23](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L23)
-
-___
-
 ### entities
 
 • `Private` **entities**: [*Entity*](entity.md)[]= []
 
 Internal pool of entities
 
-Defined in: [entityManager.ts:17](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L17)
+Defined in: [entityManager.ts:16](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L16)
 
 ___
 
@@ -66,7 +54,7 @@ ___
 
 Entity id cache
 
-Defined in: [entityManager.ts:12](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L12)
+Defined in: [entityManager.ts:11](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L11)
 
 ## Accessors
 
@@ -78,7 +66,7 @@ Get the number of entities in this EntityManager
 
 **Returns:** *number*
 
-Defined in: [entityManager.ts:88](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L88)
+Defined in: [entityManager.ts:81](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L81)
 
 ## Methods
 
@@ -90,7 +78,7 @@ Iterate over all the entities of this EntityManager
 
 **Returns:** *IterableIterator*<[*Entity*](entity.md)\>
 
-Defined in: [entityManager.ts:95](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L95)
+Defined in: [entityManager.ts:88](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L88)
 
 ___
 
@@ -112,7 +100,7 @@ Creates and places an entity in this EntityManager, given the supplied component
 
 the newly created entity
 
-Defined in: [entityManager.ts:40](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L40)
+Defined in: [entityManager.ts:33](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L33)
 
 ___
 
@@ -130,7 +118,7 @@ Deletes the supplied entity from the EntityManager array pool.
 
 **Returns:** *void*
 
-Defined in: [entityManager.ts:51](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L51)
+Defined in: [entityManager.ts:44](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L44)
 
 ___
 
@@ -151,7 +139,7 @@ an Entity iterator over all entities, if no component types are supplied.
 
 An iteratable object instance over the entities
 
-Defined in: [entityManager.ts:66](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L66)
+Defined in: [entityManager.ts:59](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L59)
 
 ___
 
@@ -165,4 +153,4 @@ Generates an id number for identifying entities
 
 The next entity id
 
-Defined in: [entityManager.ts:29](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entityManager.ts#L29)
+Defined in: [entityManager.ts:22](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entityManager.ts#L22)

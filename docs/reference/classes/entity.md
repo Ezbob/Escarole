@@ -10,7 +10,6 @@
 
 ### Properties
 
-- [componentRegistry](entity.md#componentregistry)
 - [components](entity.md#components)
 - [id](entity.md#id)
 
@@ -24,40 +23,28 @@
 
 ### constructor
 
-\+ **new Entity**(`componentRegistry`: *ComponentRegistry*, `id`: *number*): [*Entity*](entity.md)
+\+ **new Entity**(`id`: *number*): [*Entity*](entity.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `componentRegistry` | *ComponentRegistry* |
 | `id` | *number* |
 
 **Returns:** [*Entity*](entity.md)
 
-Defined in: [entity.ts:19](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L19)
+Defined in: [entity.ts:12](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L12)
 
 ## Properties
 
-### componentRegistry
-
-• `Private` **componentRegistry**: *ComponentRegistry*
-
-ComponentRegistry associates the component constructor to ids.
-This is usually a reference parsed to the entity.
-
-Defined in: [entity.ts:13](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L13)
-
-___
-
 ### components
 
-• `Private` **components**: *Map*<number, any\>
+• `Private` **components**: *Map*<ComponentConstructor<any\>, ComponentInstance\>
 
 Internal map from component ids (usually fetched from a ComponentRegistry) to the associated
 component instances of this entity
 
-Defined in: [entity.ts:19](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L19)
+Defined in: [entity.ts:12](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L12)
 
 ___
 
@@ -67,7 +54,7 @@ ___
 
 Readonly identify number of the entity.
 
-Defined in: [entity.ts:7](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L7)
+Defined in: [entity.ts:6](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L6)
 
 ## Methods
 
@@ -85,7 +72,7 @@ Add one or more components to this Entity.
 
 **Returns:** *void*
 
-Defined in: [entity.ts:52](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L52)
+Defined in: [entity.ts:42](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L42)
 
 ___
 
@@ -103,7 +90,7 @@ Delete one or more components that is associated with this Entity.
 
 **Returns:** *void*
 
-Defined in: [entity.ts:41](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L41)
+Defined in: [entity.ts:32](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L32)
 
 ___
 
@@ -130,4 +117,4 @@ Get the component instance of a specific ComponentConstructor type
 A object instance of ComponentConstructor type iff the Entity has
 a component of the ComponentConstructor type or undefined otherwise.
 
-Defined in: [entity.ts:32](https://github.com/Ezbob/Escarole/blob/9ca131f/src/entity.ts#L32)
+Defined in: [entity.ts:24](https://github.com/Ezbob/Escarole/blob/5221bf1/src/entity.ts#L24)

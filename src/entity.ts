@@ -1,5 +1,3 @@
-import { ComponentRegistry } from './componentRegistry';
-
 export class Entity {
   /**
    * Readonly identify number of the entity.
@@ -7,20 +5,13 @@ export class Entity {
   readonly id: number;
 
   /**
-   * ComponentRegistry associates the component constructor to ids.
-   * This is usually a reference parsed to the entity.
-   */
-  private componentRegistry: ComponentRegistry;
-
-  /**
    * Internal map from component ids (usually fetched from a ComponentRegistry) to the associated
    * component instances of this entity
    */
-  private components: Map<number, any> = new Map();
+  private components: Map<ComponentConstructor, ComponentInstance> = new Map();
 
-  constructor(componentRegistry: ComponentRegistry, id: number) {
+  constructor(id: number) {
     this.id = id;
-    this.componentRegistry = componentRegistry;
   }
 
   /**
@@ -30,8 +21,7 @@ export class Entity {
    * a component of the ComponentConstructor type or undefined otherwise.
    */
   getComponent<T>(c: ComponentConstructor<T>): T | undefined {
-    let cid = this.componentRegistry.getId(c);
-    return this.components.get(cid as number);
+    return this.components.get(c) as T;
   }
 
   /**
@@ -40,8 +30,7 @@ export class Entity {
    */
   deleteComponent(...components: ComponentConstructor[]) {
     for (let component of components) {
-      let cid = this.componentRegistry.getId(component);
-      this.components.delete(cid as number);
+      this.components.delete(component);
     }
   }
 
@@ -51,10 +40,10 @@ export class Entity {
    */
   addComponent(...components: ComponentInstance[]) {
     for (let component of components) {
-      let componentId = this.componentRegistry.register(
-        component.constructor as ComponentConstructor
+      this.components.set(
+        component.constructor as ComponentConstructor,
+        component
       );
-      this.components.set(componentId, component);
     }
   }
 }

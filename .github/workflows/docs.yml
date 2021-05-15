@@ -1,0 +1,24 @@
+name: docs
+on: push
+jobs:
+  docs:
+    name: Reference documentation generation
+    runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install depends and build (with cache)
+        uses: bahmutov/npm-install@v1
+
+      - name: Generate reference documents
+        run: npm run docs:reference
+
+      - name: Update reference docs
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: docs/reference/**/*.md
+            commit-msg: Update reference docs
+            github-token: ${{ secrets.GITHUB_TOKEN }}

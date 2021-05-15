@@ -1,8 +1,14 @@
 name: CI
-on: [push]
+on:
+  workflow_run:
+    workflows: ["docs"]
+    branches: [trunk]
+    types: 
+      - completed
 jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     runs-on: ${{ matrix.os }}
     strategy:

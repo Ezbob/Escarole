@@ -1,4 +1,3 @@
-import { ComponentRegistry } from './componentRegistry';
 import { Entity } from './entity';
 
 /**
@@ -17,12 +16,6 @@ export class EntityManager {
   private entities: Entity[] = [];
 
   /**
-   * An instance of ComponentRegistry. Associates the component constructors with component ids, which
-   * are used in entities queries.
-   */
-  private componentRegistry: ComponentRegistry = new ComponentRegistry();
-
-  /**
    * Generates an id number for identifying entities
    * @returns {number} The next entity id
    */
@@ -37,8 +30,8 @@ export class EntityManager {
    * Entity
    * @returns {Entity} the newly created entity
    */
-  public createEntity(...components: ComponentInstance[]) {
-    let entity = new Entity(this.componentRegistry, this.getNextId());
+  public createEntity(...components: ComponentInstance[]): Entity {
+    let entity = new Entity(this.getNextId());
     entity.addComponent(...components);
     this.entities.push(entity);
     return entity;

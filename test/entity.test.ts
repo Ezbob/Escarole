@@ -1,7 +1,6 @@
 import { Entity } from '../src/entity';
 
 describe('Entity', () => {
-
   test('Can assign id to entity', () => {
     let entityId = 42;
     let entity = new Entity(entityId);
@@ -19,7 +18,7 @@ describe('Entity', () => {
 
     entity.addComponent(new Component(1, 2));
 
-    let componentInstance = entity.getComponent(Component)
+    let componentInstance = entity.getComponent(Component);
     expect(componentInstance).toBeDefined();
     expect(componentInstance).toBeInstanceOf(Component);
 

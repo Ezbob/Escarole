@@ -1,4 +1,3 @@
-
 export class Entity {
   /**
    * Readonly identify number of the entity.
@@ -41,7 +40,10 @@ export class Entity {
    */
   addComponent(...components: ComponentInstance[]) {
     for (let component of components) {
-      this.components.set(component.constructor as ComponentConstructor, component);
+      this.components.set(
+        component.constructor as ComponentConstructor,
+        component
+      );
     }
   }
 }

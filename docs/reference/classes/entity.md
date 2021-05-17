@@ -33,7 +33,7 @@
 
 **Returns:** [*Entity*](entity.md)
 
-Defined in: [entity.ts:11](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L11)
+Defined in: [entity.ts:11](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L11)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Defined in: [entity.ts:11](https://github.com/Ezbob/Escarole/blob/f4f778a/src/en
 Internal map from component ids (usually fetched from a ComponentRegistry) to the associated
 component instances of this entity
 
-Defined in: [entity.ts:11](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L11)
+Defined in: [entity.ts:11](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L11)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 Readonly identify number of the entity.
 
-Defined in: [entity.ts:5](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L5)
+Defined in: [entity.ts:5](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L5)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Add one or more components to this Entity.
 
 **Returns:** *void*
 
-Defined in: [entity.ts:41](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L41)
+Defined in: [entity.ts:41](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L41)
 
 ___
 
@@ -90,7 +90,7 @@ Delete one or more components that is associated with this Entity.
 
 **Returns:** *void*
 
-Defined in: [entity.ts:31](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L31)
+Defined in: [entity.ts:31](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L31)
 
 ___
 
@@ -117,4 +117,4 @@ Get the component instance of a specific ComponentConstructor type
 A object instance of ComponentConstructor type iff the Entity has
 a component of the ComponentConstructor type or undefined otherwise.
 
-Defined in: [entity.ts:23](https://github.com/Ezbob/Escarole/blob/f4f778a/src/entity.ts#L23)
+Defined in: [entity.ts:23](https://github.com/Ezbob/Escarole/blob/9fed9f8/src/entity.ts#L23)

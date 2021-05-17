@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" src="https://github.com/Ezbob/Escarole/blob/98b96f5b2ebc90d116d6b87a6e2e3ef03aec95d3/docs/logo.png" alt="Escarole Logo">
+  <img width="200" src="https://github.com/Ezbob/Escarole/blob/3e18a4fefe5efbf11a2415c3d089f7c751d98cde/docs/logo.png" alt="Escarole Logo">
 </p>
 
 

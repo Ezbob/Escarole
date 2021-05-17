@@ -5,7 +5,7 @@ escarole / [Exports](modules.md)
 </p>
 
 [![CI](https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk)](https://github.com/Ezbob/Escarole/actions/workflows/main.yml)
-
+[![npm version](https://badge.fury.io/js/escarole.svg)](https://badge.fury.io/js/escarole)
 <div align="left">
   <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-branches.svg" alt="Coverage Branches">
   <img src="https://github.com/Ezbob/Escarole/blob/3a50ef4cb5f3b218c42c4c816a27c909048639ed/docs/badges/badge-functions.svg" alt="Coverage Functions">

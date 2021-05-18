@@ -1,0 +1,30 @@
+name: post build
+on:
+  workflow_run:
+    workflows: ["CI"]
+    branches: [trunk]
+    types: 
+      - completed
+jobs:
+  post-build:
+    name: Run post build actions
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install depends and build (with cache)
+        uses: bahmutov/npm-install@v1
+
+      - name: Generate test badges
+        run: npm run test:badges
+
+      - name: Update test badges
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: docs/badges/*.svg
+            commit-msg: Update test badges
+            github-token: ${{ secrets.GITHUB_TOKEN }}

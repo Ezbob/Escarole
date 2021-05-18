@@ -47,10 +47,9 @@ describe('EntityManager', () => {
 
     expect(entityManager.length).toEqual(0);
 
-    expect(() => entityManager.deleteEntity(entity1)).not.toThrow()
+    expect(() => entityManager.deleteEntity(entity1)).not.toThrow();
 
     expect(entityManager.length).toEqual(0);
-
   });
 
   test('Can iterate over components to get entities', () => {

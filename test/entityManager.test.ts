@@ -31,6 +31,28 @@ describe('EntityManager', () => {
     expect(entityManager.length).toEqual(0);
   });
 
+  test('Deleting already deleted entities does nothing', () => {
+    let entityManager = new EntityManager();
+
+    class Component {}
+    class Component1 {}
+
+    let entity1 = entityManager.createEntity(new Component(), new Component1());
+    let entity2 = entityManager.createEntity(new Component(), new Component1());
+
+    expect(entityManager.length).toEqual(2);
+
+    entityManager.deleteEntity(entity1);
+    entityManager.deleteEntity(entity2);
+
+    expect(entityManager.length).toEqual(0);
+
+    expect(() => entityManager.deleteEntity(entity1)).not.toThrow()
+
+    expect(entityManager.length).toEqual(0);
+
+  });
+
   test('Can iterate over components to get entities', () => {
     let entityManager = new EntityManager();
 

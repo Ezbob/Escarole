@@ -6,6 +6,9 @@ escarole / [Exports](modules.md)
 
 [![CI](https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk)](https://github.com/Ezbob/Escarole/actions/workflows/main.yml)
 [![npm version](https://badge.fury.io/js/escarole.svg)](https://badge.fury.io/js/escarole)
+[![License](https://img.shields.io/github/license/Ezbob/Escarole)](https://github.com/Ezbob/Escarole/blob/trunk/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Ezbob/Escarole/total)]()
+
 <div align="left">
   <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-branches.svg" alt="Coverage Branches">
   <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-functions.svg" alt="Coverage Functions">

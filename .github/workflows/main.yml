@@ -36,6 +36,3 @@ jobs:
 
       - name: Build
         run: yarn build
-
-      - name: Badges
-        run: npm run test:badges

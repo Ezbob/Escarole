@@ -1,16 +1,16 @@
 escarole / [Exports](modules.md)
 
 <p align="center">
-  <img width="200" src="docs/logo.png" alt="Escarole Logo">
+  <img width="200" src="https://github.com/Ezbob/Escarole/blob/trunk/docs/logo.png" alt="Escarole Logo">
 </p>
 
 [![CI](https://github.com/Ezbob/Escarole/actions/workflows/main.yml/badge.svg?branch=trunk)](https://github.com/Ezbob/Escarole/actions/workflows/main.yml)
 [![npm version](https://badge.fury.io/js/escarole.svg)](https://badge.fury.io/js/escarole)
 <div align="left">
-  <img src="docs/badges/badge-branches.svg" alt="Coverage Branches">
-  <img src="docs/badges/badge-functions.svg" alt="Coverage Functions">
-  <img src="docs/badges/badge-lines.svg" alt="Coverage Lines">
-  <img src="docs/badges/badge-statements.svg" alt="Coverage Statements">
+  <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-branches.svg" alt="Coverage Branches">
+  <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-functions.svg" alt="Coverage Functions">
+  <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-lines.svg" alt="Coverage Lines">
+  <img src="https://raw.githubusercontent.com/Ezbob/Escarole/trunk/docs/badges/badge-statements.svg" alt="Coverage Statements">
 </div>
 
 ---
